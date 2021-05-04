@@ -21,3 +21,22 @@ code {
   padding: 20px;
   border: 2px red solid;
 }
+
+.movies-div {
+  border: 2px cornflowerblue solid;
+  width: 49%;
+  float: left;
+ 
+}
+
+.nom-div {
+  border: 2px green solid;
+  text-align: center;
+  float: right;
+  width: 50%;
+  
+}
+.movie-img {
+  max-width: 200px;
+  max-height: 150px;
+}
