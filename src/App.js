@@ -9,12 +9,14 @@ function App() {
   let [movies, setMovies] = useState([])
   let [noms, setNoms] = useState([])
 
+  console.log(noms)
+
   return (
     <div className="App">
       <Header/>
       <SearchBar movies={movies} setMovies={setMovies}/>
       {movies ? <MoviesList movies={movies} noms={noms} setNoms={setNoms}/> : null }
-      <Nominations/>
+      {noms.length > 0 ? <Nominations noms={noms}/> : null }
     </div>
   );
 }
