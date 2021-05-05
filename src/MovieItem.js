@@ -1,18 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-function MovieItem({movie, noms, setNoms}) {
-    let [isNominated, setIsNominated] = useState(false)
+function MovieItem({movie, addNom}) {
 
-    function handleNomination(e) {
-        e.preventDefault()
-        setNoms(noms.concat(movie))
-        setIsNominated(!isNominated)
-    }
 
     return (<div> 
         <img className="movie-img" src={movie.Poster} alt="movie poster"/>
         <h5>{movie.Title} ({movie.Year})</h5>
-        {!isNominated ? <button onClick ={handleNomination} >Nominate</button> : <button onClick ={handleNomination} disabled>Nominate</button>}
+       <button onClick ={() => addNom(movie)} >Nominate</button> 
+       <button  disabled>Nominate</button>
 
     </div>)
 }

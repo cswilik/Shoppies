@@ -9,14 +9,29 @@ function App() {
   let [movies, setMovies] = useState([])
   let [noms, setNoms] = useState([])
 
-  console.log(noms)
+
+  function addNom(movie) {
+    setNoms(noms.concat(movie))
+    
+  }
+
+  function deleteNom(movie) {
+   const filteredNoms = noms.filter(i => {
+     console.log(i)
+      return i.imdbID !== movie.imdbID
+    })
+    setNoms(filteredNoms)
+    console.log(noms)
+  }
+
+  
 
   return (
     <div className="App">
       <Header/>
       <SearchBar movies={movies} setMovies={setMovies}/>
-      {movies ? <MoviesList movies={movies} noms={noms} setNoms={setNoms}/> : null }
-      {noms.length > 0 ? <Nominations noms={noms}/> : null }
+      {movies ? <MoviesList movies={movies} addNom={addNom}/> : null }
+      {noms.length > 0 ? <Nominations noms={noms} deleteNom={deleteNom}/> : null }
     </div>
   );
 }

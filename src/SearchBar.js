@@ -12,7 +12,6 @@ function SearchBar({movies, setMovies}) {
         )}, [search])
     
 
-    console.log(movies)
     return (
         <div className="searchbar-div">
             <label>Search Your Favorite Films </label>

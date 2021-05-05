@@ -1,9 +1,10 @@
 import React from 'react' 
+import NomItem from './NomItem';
 
-function Nominations({noms}) {
+function Nominations({noms, deleteNom}) {
 
     const nominationElements = noms.map(item => {
-       return( <h6>{item.Title}, {item.Year}</h6>)
+       return( <NomItem key={item.imdbID} nom={item} deleteNom={deleteNom}/>)
     })
     return (
         <div className='nom-div'>
