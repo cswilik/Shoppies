@@ -1,20 +1,32 @@
 import  React, {useState, useEffect} from 'react' 
 
 
-function SearchBar({movies, setMovies}) {
+function SearchBar({setMovies}) {
     let [search, setSearch] = useState("")
     
 
     useEffect(() => {
         fetch(`http://www.omdbapi.com/?apikey=aa9ef830&s=${search}`)
         .then(r => r.json())
-        .then(data => setMovies(data.Search)
+        .then(data => handleData(data.Search)
         )}, [search])
     
+    function handleData(data) {
+        if (data === undefined) {
+            return null
+        } else {
+        let searchedMovies = data.map(item => {
+            return {...item, isNominated: false}
+        })
+        setMovies(searchedMovies)
+    }
+
+
+    }
 
     return (
         <div className="searchbar-div">
-            <label>Search Your Favorite Films </label>
+            <label className="text">Search Your Favorite Films </label>
             <input className="input-bar" type="text" placeholder="Search Film Title" value={search} onChange={(event) => setSearch(event.target.value)}></input>
             
         </div>

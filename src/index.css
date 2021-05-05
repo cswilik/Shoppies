@@ -21,18 +21,24 @@ code {
   font-family: 'Pacifico', cursive;
   font-size: 40px;
   letter-spacing: 4px;
+  color: #0092cc;
 }
 
 .text {
   font-family: 'Quicksand', sans-serif;
-  font-weight: bolder
+  font-weight: bolder;
+  color: #00B4CC;
+}
+
+.curly-text {
+  font-family: 'Pacifico', cursive;
+  color:#00B4CC;
+  letter-spacing: 3px;
 }
 
 .searchbar-div {  
   padding: 20px;
   border: 2px red solid;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bolder
 }
 
 .input-bar {
@@ -43,7 +49,7 @@ code {
   height: 20px;
   border-radius: 5px 5px 5px 5px;
   outline: none;
-  color: #9DBFAF;
+  color: #026e7c;
 }
 
 .searchTerm:focus{
@@ -54,8 +60,8 @@ code {
   border: 2px cornflowerblue solid;
   width: 49%;
   float: left;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bolder
+  columns: 2 auto;
+ 
  
 }
 
