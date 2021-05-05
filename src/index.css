@@ -17,15 +17,45 @@ code {
   text-align: center;
 }
 
-.searchbar-div {
+.title-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder
+}
+
+.searchbar-div {  
   padding: 20px;
   border: 2px red solid;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder
+}
+
+.input-bar {
+  width: 20%;
+  border: 3px solid #00B4CC;
+  /* border-right: none; */
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
 }
 
 .movies-div {
   border: 2px cornflowerblue solid;
   width: 49%;
   float: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder
  
 }
 

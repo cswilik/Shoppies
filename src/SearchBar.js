@@ -15,7 +15,8 @@ function SearchBar({movies, setMovies}) {
     return (
         <div className="searchbar-div">
             <label>Search Your Favorite Films </label>
-            <input type="text" placeholder="Search Film Title" value={search} onChange={(event) => setSearch(event.target.value)}></input>
+            <input className="input-bar" type="text" placeholder="Search Film Title" value={search} onChange={(event) => setSearch(event.target.value)}></input>
+            
         </div>
 
     )
