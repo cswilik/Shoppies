@@ -1,7 +1,7 @@
 import  React, {useState, useEffect} from 'react' 
 
 
-function SearchBar({setMovies}) {
+function SearchBar({setMovies, movies}) {
     let [search, setSearch] = useState("")
     
 
@@ -19,10 +19,8 @@ function SearchBar({setMovies}) {
             return {...item, isNominated: false}
         })
         setMovies(searchedMovies)
-    }
+    }}
 
-
-    }
 
     return (
         <div className="searchbar-div">
