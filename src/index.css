@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -13,6 +14,8 @@ code {
 }
 
 .header-div {
+  background-image: url('./award\ paper.jpeg');
+  background-size: contain;
   border: 2px black solid;
   text-align: center;
 }
@@ -21,58 +24,70 @@ code {
   font-family: 'Pacifico', cursive;
   font-size: 40px;
   letter-spacing: 4px;
-  color: #0092cc;
+  color: black
 }
 
 .text {
   font-family: 'Quicksand', sans-serif;
   font-weight: bolder;
-  color: #00B4CC;
+  color: gold
 }
 
 .curly-text {
   font-family: 'Pacifico', cursive;
-  color:#00B4CC;
+  color:gold;
   letter-spacing: 3px;
 }
 
 .searchbar-div {  
   padding: 20px;
-  border: 2px red solid;
 }
 
 .input-bar {
   width: 20%;
-  border: 3px solid #00B4CC;
-  /* border-right: none; */
   padding: 5px;
   height: 20px;
   border-radius: 5px 5px 5px 5px;
   outline: none;
-  color: #026e7c;
+  color: black
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: gold
 }
 
 .movies-div {
-  border: 2px cornflowerblue solid;
   width: 49%;
   float: left;
   columns: 2 auto;
- 
+  break-inside: avoid-column;
  
 }
 
+.movie-item-div {
+  padding-bottom: 20px;
+  text-align: center;
+  break-inside: avoid-column;
+}
+
+
+.movie-img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+
+.movie-title {
+  margin: 0 0 3px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  color: gold
+}
+
 .nom-div {
-  border: 2px green solid;
   text-align: center;
   float: right;
   width: 50%;
   
 }
-.movie-img {
-  max-width: 200px;
-  max-height: 150px;
-}
+

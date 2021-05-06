@@ -7,10 +7,8 @@ import Nominations from './Nominations'
 
 function App() {
   let [movies, setMovies] = useState([])
-  // let [noms, setNoms] = useState([])
   
 
- 
   function addNom(noms) {
     const updatedMovies = movies.map(mov => {
       if (noms === mov.imdbID) {
