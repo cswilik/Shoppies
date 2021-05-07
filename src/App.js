@@ -3,6 +3,7 @@ import Header from './Header'
 import SearchBar from './SearchBar'
 import MoviesList from './MoviesList'
 import Nominations from './Nominations'
+// console.log(process.env.REACT_APP_API_KEY)
 
 
 function App() {

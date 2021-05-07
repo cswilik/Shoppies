@@ -6,7 +6,7 @@ function SearchBar({setMovies, movies}) {
     
 
     useEffect(() => {
-        fetch(`http://www.omdbapi.com/?apikey=aa9ef830&s=${search}`)
+        fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${search}`)
         .then(r => r.json())
         .then(data => handleData(data.Search)
         )}, [search])
