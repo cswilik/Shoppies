@@ -12,8 +12,8 @@ function App() {
   function addNom(noms) {
     const updatedMovies = movies.map(mov => {
       if (noms === mov.imdbID) {
-        return {...mov, isNominated: true}
-      }
+        return mov.isNominated ? {...mov, isNominated: false} : {...mov, isNominated: true}
+        }
       return mov
     })
     setMovies(updatedMovies)
@@ -22,15 +22,6 @@ function App() {
 
 
 
-  function deleteNom(nom) {
-   const deleteNoms = movies.map(mov => {
-     if (nom === mov.imdbID) {
-       return {...mov, isNominated: false}
-     }
-     return mov
-   })
-   setMovies(deleteNoms)
-  }
 
   
   const nominated = movies.filter(mov => {
@@ -43,10 +34,11 @@ function App() {
     <div className="App">
       <Header/>
       <SearchBar setMovies={setMovies} movies={movies}/>
+      <h3 className="curly-text-right">Your Nominations:</h3>
       <h3 className="curly-text">Select Your Nominations:</h3>
-      {movies ? <MoviesList movies={movies} addNom={addNom} nominated={nominated} /> : 
-      <h4 className="text">Please search for your favorite films to nominate them for an award!</h4> }
-       {nominated.length > 0 ? <Nominations noms={nominated} deleteNom={deleteNom}/> : null}
+      {movies ? <MoviesList movies={movies} addNom={addNom} nominated={nominated} /> : null}
+      
+       {nominated.length > 0 ? <Nominations noms={nominated} addNom={addNom}/> : null}
     </div>
   );
 }
