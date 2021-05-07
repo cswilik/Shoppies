@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Shoppies/static/css/main.ab0d106f.chunk.css",
+    "main.js": "/Shoppies/static/js/main.e7b71422.chunk.js",
+    "main.js.map": "/Shoppies/static/js/main.e7b71422.chunk.js.map",
+    "runtime-main.js": "/Shoppies/static/js/runtime-main.d6f63a7d.js",
+    "runtime-main.js.map": "/Shoppies/static/js/runtime-main.d6f63a7d.js.map",
+    "static/js/2.cbe63f75.chunk.js": "/Shoppies/static/js/2.cbe63f75.chunk.js",
+    "static/js/2.cbe63f75.chunk.js.map": "/Shoppies/static/js/2.cbe63f75.chunk.js.map",
+    "static/js/3.6c35a17c.chunk.js": "/Shoppies/static/js/3.6c35a17c.chunk.js",
+    "static/js/3.6c35a17c.chunk.js.map": "/Shoppies/static/js/3.6c35a17c.chunk.js.map",
+    "index.html": "/Shoppies/index.html",
+    "static/css/main.ab0d106f.chunk.css.map": "/Shoppies/static/css/main.ab0d106f.chunk.css.map",
+    "static/js/2.cbe63f75.chunk.js.LICENSE.txt": "/Shoppies/static/js/2.cbe63f75.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Shoppies/static/media/award bkrnd.d0fcbd91.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d6f63a7d.js",
+    "static/js/2.cbe63f75.chunk.js",
+    "static/css/main.ab0d106f.chunk.css",
+    "static/js/main.e7b71422.chunk.js"
+  ]
+}
