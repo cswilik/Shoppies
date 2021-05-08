@@ -5,7 +5,7 @@ import  React, {useState, useEffect} from 'react'
 function SearchBar({setMovies}) {
     let [search, setSearch] = useState("")
     
-// allows us to search the API and update whenever we search
+
     useEffect(() => {
     fetch(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${search}`)
     .then(r => r.json())

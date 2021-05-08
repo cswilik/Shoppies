@@ -11,6 +11,7 @@ let movieElements = movies.map(item => {
 
 
     return (<div className="movies-div">
+        
         {movieElements}
         </div>)
 }
