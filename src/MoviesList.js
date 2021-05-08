@@ -2,11 +2,11 @@ import React from 'react'
 import MovieItem from './MovieItem';
 
 
-function MoviesList({movies, addNom, nominated}) {
+function MoviesList({movies, addNom, noms}) {
 
 
 let movieElements = movies.map(item => {
-    return (<MovieItem key={item.imdbID}  movie={item} addNom={addNom} nominated={nominated}/>)
+    return (<MovieItem key={item.imdbID}  movie={item} addNom={addNom} noms={noms}/>)
 })
 
 

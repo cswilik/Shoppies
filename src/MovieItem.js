@@ -1,13 +1,19 @@
 import React from 'react'
 
-function MovieItem({movie, addNom, nominated, deleteNom}) {
+
+function MovieItem({movie, addNom, noms}) {
     
-    
+    function handleClick(e) {
+        e.preventDefault()
+        addNom(movie)
+    }
+
+    const nominated = noms.find(n => n.imdbID === movie.imdbID)
 
     return (<div className="movie-item-div"> 
         <img className="movie-img" src={movie.Poster} alt="movie poster"/>
         <h5 className="movie-title">{movie.Title} ({movie.Year})</h5>
-        {movie.isNominated || nominated.length >= 5 ? <button disabled>Nominated</button> :<button className="button" onClick ={() => addNom(movie.imdbID)} >Nominate</button> }
+        {(nominated || noms.length > 5) ? <button disabled>Nominate</button> : <button className="button" onClick ={(e) =>{handleClick(e)}} >Nominate</button> }
         
     </div>)
 }
