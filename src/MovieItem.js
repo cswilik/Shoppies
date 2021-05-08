@@ -13,7 +13,7 @@ function MovieItem({movie, addNom, noms}) {
     return (<div className="movie-item-div"> 
         <img className="movie-img" src={movie.Poster} alt="movie poster"/>
         <h5 className="movie-title">{movie.Title} ({movie.Year})</h5>
-        {(nominated || noms.length > 5) ? <button disabled>Nominate</button> : <button className="button" onClick ={(e) =>{handleClick(e)}} >Nominate</button> }
+        {(nominated || noms.length >= 5) ? <button disabled>Nominate</button> : <button className="button" onClick ={(e) =>{handleClick(e)}} >Nominate</button> }
         
     </div>)
 }
