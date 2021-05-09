@@ -35,7 +35,11 @@ function App() {
   }
 
 
- 
+ function handleSubmit(e) {
+   e.preventDefault()
+    alert('Thank you for submitting! Please stay tuned for The Shoppies Awards Ceremony in the near future!' )
+    setNoms([])
+ }
 
   return (
     <div className="App">
@@ -45,13 +49,13 @@ function App() {
       <h3 className="curly-text">Select Your Nominations:</h3>
       {noms.length >= 5 ? <div className="submit-div">
                 <p>You cannot have more than 5 nominations! Please submit when you're ready!</p>
-                <button className="button">Submit</button>
-          </div> : null}
+                <button className="button" onClick={(e) => handleSubmit(e)}>Submit</button>
+        </div> : null}
       {movies.length > 0 ? <MoviesList movies={movies} addNom={addNom} noms={noms} /> : 
         <div className="start-div">
           <span role="img" aria-label="sheep" className="emoji">🏆</span>
-        Begin by searching your favorite films!
-        <span role="img" aria-label="sheep" className="emoji">🏆</span>
+          Begin by searching your favorite films!
+          <span role="img" aria-label="sheep" >🏆</span>
         </div> }
       {noms.length > 0 ? <Nominations noms={noms} addNom={addNom} deleteNom={deleteNom}/> : null}
     </div>
