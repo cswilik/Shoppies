@@ -39,6 +39,7 @@ function App() {
    e.preventDefault()
     alert('Thank you for submitting! Please stay tuned for The Shoppies Awards Ceremony in the near future!' )
     setNoms([])
+    localStorage.setItem("nominations", JSON.stringify([]))
  }
 
   return (
